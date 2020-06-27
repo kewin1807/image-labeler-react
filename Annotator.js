@@ -879,6 +879,9 @@ var Annotator = /** @class */ (function (_super) {
                                 _this.chosenBox.annotation = value;
                                 _this.setState({ annotation: value });
                             }
+                            if(_this.props.drawLabelEnd){
+                                _this.props.drawLabelEnd()
+                            }
                         }, disabled: isLocked, value: this.state.annotation }, this.props.types.map(function (type) {
                         return React.createElement(Option, { value: type, key: type }, type);
                     })),
